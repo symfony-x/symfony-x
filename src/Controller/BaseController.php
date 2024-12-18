@@ -11,5 +11,4 @@ class BaseController extends AbstractController
     // i see this as being used in forked projects for gaining new functionality. or maybe never at all
     // pretty sure there are no performance implications in production runtime leaving it here.
     // this is why we spent all that time learning OOP, right?
-
 }

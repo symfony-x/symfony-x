@@ -11,12 +11,10 @@ use Symfony\Component\Routing\Attribute\Route;
  *
  * This controller provides functionalities to display welcome pages and other related views
  * for the Symfony-X section of the application.
- *
- * @package App\Controller
  */
 class SymfonyXController extends BaseController
 {
-     /**
+    /**
      * Displays the welcome page for Symfony-X.
      *
      * This method renders the 'welcome.html.twig' template located in the 'symfony-x' directory.
@@ -25,7 +23,7 @@ class SymfonyXController extends BaseController
      *
      * @Route("/Symfony-X/Welcome", name="symfony-x_welcome")
      *
-     * @return Response The HTTP response containing the rendered welcome page.
+     * @return Response the HTTP response containing the rendered welcome page
      */
     #[Route('/Symfony-X/Welcome', name: 'symfony-x_welcome')]
     public function welcome(): Response
@@ -40,7 +38,7 @@ class SymfonyXController extends BaseController
      * It is accessible via the '/Symfony-X/_dev/default-html' URL and is named 'dev_default_html' for
      * routing purposes.
      *
-     * @return Response The HTTP response containing the rendered default HTML page.
+     * @return Response the HTTP response containing the rendered default HTML page
      */
     #[Route('/Symfony-X/_dev/default-html', name: 'dev_default_html')]
     public function devDefaultHtml(): Response
@@ -48,7 +46,7 @@ class SymfonyXController extends BaseController
         return new JsonResponse([
             'message' => 'Use this route to view the current HTML of the template you are working on.',
         ]);
-        //return $this->render('symfony-x/complete.html.twig');
+        // return $this->render('symfony-x/complete.html.twig');
     }
 
     #[Route('/Symfony-X/_dev/default-html', name: 'dev_default_html2')]
@@ -56,6 +54,4 @@ class SymfonyXController extends BaseController
     {
         return $this->render('symfony-x/dev/wip.html.twig');
     }
-
-
 }

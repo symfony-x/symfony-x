@@ -14,5 +14,4 @@ class MainController extends BaseController
         // Change this to redirect to your own routes
         return $this->redirectToRoute('symfony-x_welcome');
     }
-
 }
