@@ -28,7 +28,8 @@ Symfony-X is a Symfony [LAST Stack](https://symfonycasts.com/screencast/last-sta
 4. **Build and Start Docker Containers**
 
    ```bash
-   docker-compose up --build -d
+   docker-compose build --no-cache
+   docker-compose up -d
    ```
 
 ## Requirements
